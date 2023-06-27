@@ -1,12 +1,15 @@
 import React from "react";
 import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
+import styles from "./Layout.module.css";
 
 export const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <div className="container">
+      <div className={styles.container}>
         <Navbar />
-        {children}
+        <div className={styles.children__container}>{children}</div>
+        <Footer />
       </div>
     </React.Fragment>
   );

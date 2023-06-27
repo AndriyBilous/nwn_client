@@ -4,6 +4,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* height: 15%; */
+  height: clamp(45px, 15%, 75px);
 }
 
 .navigation_list__container {

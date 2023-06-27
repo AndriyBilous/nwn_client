@@ -1,0 +1,7 @@
+.locations__container {
+  background-image: url("./../images/background_03.jpg");
+  height: inherit;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
