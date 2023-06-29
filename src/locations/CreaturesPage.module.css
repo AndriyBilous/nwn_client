@@ -1,7 +1,8 @@
 .creatures__container {
   background-image: url("./../images/background_02.jpg");
-  height: inherit;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: -webkit-fill-available;
 }
