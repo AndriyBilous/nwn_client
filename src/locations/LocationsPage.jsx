@@ -2,15 +2,6 @@ import React, { useState } from "react";
 import styles from "./LocationsPage.module.css";
 import { ArcherContainer, ArcherElement } from "react-archer";
 
-const rootStyle = { display: "flex", justifyContent: "center" };
-const rowStyle = {
-  margin: "200px 0",
-  display: "flex",
-  justifyContent: "space-between",
-};
-
-const boxStyle = { padding: "10px", border: "1px solid black" };
-
 export const LocationsPage = () => {
   return (
     <div className={styles.locations__container}>
@@ -27,7 +18,7 @@ export const LocationsPage = () => {
                     targetId: "element4",
                     targetAnchor: "top",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -45,11 +36,19 @@ export const LocationsPage = () => {
                     targetId: "element11",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "blue",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.blue_background
+                  }
+                >
                   <p>Безлюдные земли. Черная башня. Служебные помещения</p>
                 </div>
               </ArcherElement>
@@ -64,7 +63,7 @@ export const LocationsPage = () => {
                     targetId: "element7",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -82,7 +81,7 @@ export const LocationsPage = () => {
                     targetId: "element3",
                     targetAnchor: "right",
                     sourceAnchor: "left",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -100,17 +99,21 @@ export const LocationsPage = () => {
                     targetId: "element2",
                     targetAnchor: "bottom",
                     sourceAnchor: "top",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                   {
                     targetId: "element9",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.blue_background
+                  }
+                >
                   <p>Безлюдные земли. Черная башня. Храм темных богов</p>
                 </div>
               </ArcherElement>
@@ -124,11 +127,15 @@ export const LocationsPage = () => {
                     targetId: "element13",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.border_purple
+                  }
+                >
                   <p>Безлюдные земли. Иглы стужи. Подземный проход (застава)</p>
                 </div>
               </ArcherElement>
@@ -141,7 +148,7 @@ export const LocationsPage = () => {
                     targetId: "element14",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -162,7 +169,11 @@ export const LocationsPage = () => {
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Безлюдные земли. Иглы стужи. Пещера</p>
                 </div>
               </ArcherElement>
@@ -181,11 +192,15 @@ export const LocationsPage = () => {
                     targetId: "element15",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.blue_background
+                  }
+                >
                   <p>Безлюдные земли. Черная башня</p>
                 </div>
               </ArcherElement>
@@ -198,11 +213,15 @@ export const LocationsPage = () => {
                     targetId: "element11",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Безлюдные земли. Карстовые пещеры. Подземное озеро</p>
                 </div>
               </ArcherElement>
@@ -215,17 +234,25 @@ export const LocationsPage = () => {
                     targetId: "element18",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                   {
                     targetId: "element16",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Безлюдные земли. Карстовые пещеры</p>
                 </div>
               </ArcherElement>
@@ -243,7 +270,11 @@ export const LocationsPage = () => {
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Безлюдные земли. Иглы стужи. Предгорье. Ледяная тюрьма.</p>
                 </div>
               </ArcherElement>
@@ -256,13 +287,13 @@ export const LocationsPage = () => {
                     targetId: "element14",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                   {
                     targetId: "element17",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -279,7 +310,11 @@ export const LocationsPage = () => {
                     targetId: "element23",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                 ]}
               >
@@ -299,11 +334,19 @@ export const LocationsPage = () => {
                     targetId: "element23",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "blue",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.blue_background
+                  }
+                >
                   <p>Безлюдные земли. Великаньи пустоши. Руины в каньоне</p>
                 </div>
               </ArcherElement>
@@ -316,11 +359,19 @@ export const LocationsPage = () => {
                     targetId: "element25",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>
                     Безлюдные земли. Рачье герцогство. Инсанна. Лаборатория
                     алхимика
@@ -337,7 +388,7 @@ export const LocationsPage = () => {
                     targetId: "element22",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -358,7 +409,11 @@ export const LocationsPage = () => {
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>
                     Безлюдные земли. Иглы стужи. Предгорье. Ледяная усыпальница
                   </p>
@@ -373,7 +428,17 @@ export const LocationsPage = () => {
                     targetId: "element23",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                    },
+                  },
+
+                  {
+                    targetId: "element20",
+                    targetAnchor: "left",
+                    sourceAnchor: "right",
+                    style: { strokeColor: "#34c011", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -383,16 +448,21 @@ export const LocationsPage = () => {
               </ArcherElement>
             </div>
             <div className={styles.size_4}>
-              <div className={styles.block__container}>
-                <ol>
-                  <span>Корабли в:</span>
-                  <li>Побережье моря бурь</li>
-                  <li>Заграба</li>
-                  <li>Стальная пристань</li>
-                  <li>Гаррак</li>
-                  <li>Хребет мира</li>
-                </ol>
-              </div>
+              <ArcherElement id="element20">
+                <div
+                  className={styles.block__container + " " + styles.border_none}
+                >
+                  <div className={styles.oval_big}></div>
+                  <ol>
+                    <span>Корабли в:</span>
+                    <li>Побережье моря бурь</li>
+                    <li>Заграба</li>
+                    <li>Стальная пристань</li>
+                    <li>Гаррак</li>
+                    <li>Хребет мира</li>
+                  </ol>
+                </div>
+              </ArcherElement>
             </div>
             {/* Sixth row */}
             <div className={styles.size_6}>
@@ -403,11 +473,15 @@ export const LocationsPage = () => {
                     targetId: "element22",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.border_purple
+                  }
+                >
                   <p>Безлюдные земли. Д'Сан'Дор. Ельник (застава)</p>
                 </div>
               </ArcherElement>
@@ -420,19 +494,23 @@ export const LocationsPage = () => {
                     targetId: "element27",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                   {
                     targetId: "element35",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                   {
                     targetId: "element23",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -449,13 +527,13 @@ export const LocationsPage = () => {
                     targetId: "element27",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                   {
                     targetId: "element29",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -476,7 +554,11 @@ export const LocationsPage = () => {
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>
                     Безлюдные земли. Рачье герцогство. Инсанна. Заброшенные
                     катакомбы
@@ -492,11 +574,15 @@ export const LocationsPage = () => {
                     targetId: "element26",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>
                     Безлюдные земли. Рачье герцогство. Инсанна. Канализация.
                     Стоки
@@ -512,11 +598,15 @@ export const LocationsPage = () => {
                     targetId: "element34",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>
                     Безлюдные земли. Рачье герцогство. Инсанна. Канализация.
                     Отстойник
@@ -533,7 +623,13 @@ export const LocationsPage = () => {
                     targetId: "element37",
                     targetAnchor: "top",
                     sourceAnchor: "bottom",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
+                  },
+                  {
+                    targetId: "element28",
+                    targetAnchor: "left",
+                    sourceAnchor: "right",
+                    style: { strokeColor: "#34c011", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -543,11 +639,16 @@ export const LocationsPage = () => {
               </ArcherElement>
             </div>
             <div className={styles.size_8}>
-              <div className={styles.block__container}>
-                <ol>
-                  <li>Грифон в южный форт</li>
-                </ol>
-              </div>
+              <ArcherElement id="element28">
+                <div
+                  className={styles.block__container + " " + styles.border_none}
+                >
+                  <div className={styles.oval_small}></div>
+                  <ol>
+                    <li>Грифон в южный форт</li>
+                  </ol>
+                </div>
+              </ArcherElement>
             </div>
             <div className={styles.size_8}>
               <ArcherElement
@@ -557,7 +658,11 @@ export const LocationsPage = () => {
                     targetId: "element19",
                     targetAnchor: "bottom",
                     sourceAnchor: "top",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                 ]}
               >
@@ -578,7 +683,11 @@ export const LocationsPage = () => {
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Безлюдные земли. Иглы стужи. Пещера великанов</p>
                 </div>
               </ArcherElement>
@@ -591,13 +700,17 @@ export const LocationsPage = () => {
                     targetId: "element32",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                   {
                     targetId: "element19",
                     targetAnchor: "bottom",
                     sourceAnchor: "top",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: {
+                      strokeColor: "#bd0000",
+                      strokeWidth: 1,
+                      strokeDasharray: "5,5",
+                    },
                   },
                 ]}
               >
@@ -637,26 +750,22 @@ export const LocationsPage = () => {
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.yellow_background
+                  }
+                >
                   <p>Безлюдные земли. Рачье герцогство. Инсанна.</p>
                 </div>
               </ArcherElement>
             </div>
             <div className={styles.size_8}>
-              <ArcherElement
-                id="element34"
-                relations={
-                  [
-                    // {
-                    //   targetId: "element34",
-                    //   targetAnchor: "left",
-                    //   sourceAnchor: "right",
-                    //   style: { strokeColor: "blue", strokeWidth: 1 },
-                    // },
-                  ]
-                }
-              >
-                <div className={styles.block__container}>
+              <ArcherElement id="element34">
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Безлюдные земли. Рачье герцогство. Инсанна. Канализация</p>
                 </div>
               </ArcherElement>
@@ -670,11 +779,15 @@ export const LocationsPage = () => {
                     targetId: "element36",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.border_purple
+                  }
+                >
                   <p>
                     Безлюдные земли. Дорога на Д'Сан'Дор. Застава Рачьего
                     Герцогства.
@@ -707,7 +820,7 @@ export const LocationsPage = () => {
                     targetId: "element38",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                   {
                     targetId: "element29",
@@ -730,7 +843,7 @@ export const LocationsPage = () => {
                     targetId: "element39",
                     targetAnchor: "left",
                     sourceAnchor: "right",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -753,7 +866,7 @@ export const LocationsPage = () => {
                     targetId: "element32",
                     targetAnchor: "bottom",
                     sourceAnchor: "top",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
@@ -773,11 +886,15 @@ export const LocationsPage = () => {
                     targetId: "element33",
                     targetAnchor: "bottom",
                     sourceAnchor: "top",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.yellow_background
+                  }
+                >
                   <p>
                     Безлюдные земли. Рачье Герцогство. Инсанна. Драконий замок
                   </p>
@@ -792,11 +909,15 @@ export const LocationsPage = () => {
                     targetId: "element33",
                     targetAnchor: "bottom",
                     sourceAnchor: "top",
-                    style: { strokeColor: "blue", strokeWidth: 1 },
+                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
                   },
                 ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.yellow_background
+                  }
+                >
                   <p>Безлюдные земли. Рачье Герцогство. Инсанна. Арена</p>
                 </div>
               </ArcherElement>
@@ -814,7 +935,11 @@ export const LocationsPage = () => {
                 //   },
                 // ]}
               >
-                <div className={styles.block__container}>
+                <div
+                  className={
+                    styles.block__container + " " + styles.brown_background
+                  }
+                >
                   <p>Горы Отчаяния. Проход в безлюдные земли.</p>
                 </div>
               </ArcherElement>
