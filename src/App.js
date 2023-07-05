@@ -1,10 +1,10 @@
 import { Layout } from "./components/Layout.jsx";
 import { Routes, Route } from "react-router-dom";
-import { MainPage } from "./locations/MainPage";
-import { CreaturesPage } from "./locations/CreaturesPage";
-import { LocationsPage } from "./locations/LocationsPage";
-import { LocationPage } from "./locations/LocationPage";
-import { CreaturePage } from "./locations/CreaturePage.jsx";
+import { MainPage } from "./pages/MainPage";
+import { CreaturesPage } from "./pages/CreaturesPage";
+import { LocationsPage } from "./pages/LocationsPage";
+import { LocationPage } from "./pages/LocationPage";
+import { CreaturePage } from "./pages/CreaturePage.jsx";
 
 function App() {
   return (

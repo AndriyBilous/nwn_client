@@ -1,0 +1,37 @@
+.main__container {
+  height: 80%;
+  width: 45%;
+  margin: 2.5%;
+  background-color: white;
+  border-radius: 10px;
+  border: #011983 solid 3px;
+  transform: translateX(200%);
+}
+
+.main__container_show {
+  transform: translateX(200%);
+  animation: show 2s forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.main__container_hide {
+  transform: translateX(0%);
+  animation: hide 2s forwards;
+}
+
+@keyframes hide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
