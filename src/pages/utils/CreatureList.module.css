@@ -58,17 +58,17 @@
   }
 }
 
-li {
+.creature_element {
   margin: 15px auto;
 }
 
-button {
+.creature_element__button {
   font-size: 20px;
   border-radius: 5px;
   background-color: #8296f3;
 }
 
-button:hover {
+.creature_element__button:hover {
   cursor: pointer;
   font-weight: 400;
   color: white;

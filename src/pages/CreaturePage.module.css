@@ -1,0 +1,43 @@
+.creature__container {
+  background-image: url("./../images/background_02.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 24px;
+}
+
+.creature_props__container {
+  height: clamp(500px, 60%, 90%);
+  width: clamp(100px, 70%, 1200px);
+  /* width: 900px; */
+  /* background-color: #4861cf; */
+  background-color: #e7e7e7;
+  border: #011983 solid 3px;
+  border-radius: 10px;
+  transform: translateX(-150%);
+  animation: ani 2s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.creature_image__container {
+  height: 300px;
+}

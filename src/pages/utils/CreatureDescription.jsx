@@ -1,6 +1,13 @@
 import React from "react";
 import style from "./CreatureDescription.module.css";
 
-export const CreatureDescription = () => {
-  return <div>CreatureDescription</div>;
+const CreatureDescription = () => {
+  return (
+    <div>
+      <span>CreatureDescription</span>
+      <p>Here will be form from formik library</p>
+    </div>
+  );
 };
+
+export default CreatureDescription;

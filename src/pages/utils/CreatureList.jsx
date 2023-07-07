@@ -34,45 +34,66 @@ export const CreatureList = ({
     >
       <div>
         <ul>
-          <li>
+          <li className={style.creature_element}>
             Some creature 1{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>
-          <li>
+          <li className={style.creature_element}>
             Some creature 2{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>
-          <li>
+          <li className={style.creature_element}>
             Some creature 3{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>
-          <li>
+          <li className={style.creature_element}>
             Some creature 4{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>
-          <li>
+          <li className={style.creature_element}>
             Some creature 5{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>
-          <li>
+          <li className={style.creature_element}>
             Some creature 6{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>
-          <li>
+          <li className={style.creature_element}>
             Some creature 7{" "}
-            <button onClick={handleOnClick}>
+            <button
+              onClick={handleOnClick}
+              className={style.creature_element__button}
+            >
               {styleTrigger ? "Show Locations" : "Hide Locations"}
             </button>
           </li>

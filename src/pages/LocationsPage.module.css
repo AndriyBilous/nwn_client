@@ -175,3 +175,8 @@
   border: none;
   text-align: left;
 }
+
+ul li {
+  font-size: 16px;
+  margin: 5px auto;
+}
