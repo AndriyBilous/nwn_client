@@ -1,6 +1,6 @@
 .locations__container {
   background-image: url("./../images/background_03.jpg");
-  height: auto;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 /* Positioning */
@@ -64,28 +65,29 @@
 /* _____________________________________________ */
 
 .scheme__container {
-  height: auto;
+  height: 1500px;
   margin: 50px 0;
   padding: 50px 20px;
-  width: 1200px;
+  min-width: 1200px;
+  width: 1220px;
   background-color: white;
   border-radius: 10px;
   border: #011983 solid 3px;
   transform: translateX(-150%);
   animation: ani 2s forwards;
+  justify-content: flex-start;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  overflow: hidden;
+  align-content: stretch;
+  align-items: stretch;
 }
 
 .scheme__container_2 {
-  height: 100%;
+  height: 1600px;
   padding: 50px 20px;
-  width: 1200px;
+  width: 1220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,6 +95,7 @@
   flex-direction: row;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .block__container {
@@ -100,7 +103,7 @@
   width: fit-content;
   text-align: center;
   margin: 20px 0;
-  max-width: 80%;
+  max-width: 120px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   border: #bd0000 solid 2px;
@@ -129,8 +132,8 @@
 /* Coloring */
 
 .brown_background {
-  background-color: rgb(112, 58, 32);
-  color: white;
+  background-color: #6e3a20;
+  color: #ffffff;
 }
 
 .blue_background {
@@ -179,4 +182,13 @@
 ul li {
   font-size: 16px;
   margin: 5px auto;
+}
+
+/* Adaptive */
+
+@media (max-width: 1249px) {
+  .locations__container {
+    justify-content: space-between;
+    overflow-x: scroll;
+  }
 }

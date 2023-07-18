@@ -18,7 +18,7 @@ export const CreatureList = ({
     return (
       <div className={style.main__container + " " + style.absolute}>
         <div>
-          <button onClick={handleOnClick}>Show Locations</button>
+          <button onClick={handleOnClick}>Show Description</button>
         </div>
       </div>
     );
@@ -40,7 +40,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
           <li className={style.creature_element}>
@@ -49,7 +49,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
           <li className={style.creature_element}>
@@ -58,7 +58,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
           <li className={style.creature_element}>
@@ -67,7 +67,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
           <li className={style.creature_element}>
@@ -76,7 +76,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
           <li className={style.creature_element}>
@@ -85,7 +85,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
           <li className={style.creature_element}>
@@ -94,7 +94,7 @@ export const CreatureList = ({
               onClick={handleOnClick}
               className={style.creature_element__button}
             >
-              {styleTrigger ? "Show Locations" : "Hide Locations"}
+              {styleTrigger ? "Show Description" : "Hide Description"}
             </button>
           </li>
         </ul>

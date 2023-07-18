@@ -1,0 +1,51 @@
+.container {
+  height: auto;
+  width: fit-content;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: #bd0000 solid 2px;
+  z-index: 10;
+  opacity: 0.9;
+  position: relative;
+}
+
+.container p {
+  font-size: 15px;
+}
+
+.brown_background {
+  background-color: rgb(112, 58, 32);
+  color: white;
+}
+
+.blue_background {
+  background-color: #6f9ff8;
+}
+
+.yellow_background {
+  background-color: #cf9902;
+}
+
+.border_purple {
+  border-color: #bd00ce;
+}
+
+/*  */
+
+.container_oval {
+  height: auto;
+  width: max-content;
+  padding: 5px 10px;
+  text-align: left;
+  max-width: 80%;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: #bd0000 solid 2px;
+  z-index: 10;
+  opacity: 0.9;
+  border-radius: 50%;
+  border: none;
+  background-color: #c2f1b6;
+  position: absolute;
+}
