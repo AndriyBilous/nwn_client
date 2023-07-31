@@ -14,7 +14,6 @@ export const LocationsPage = () => {
   useEffect(() => {
     dispatch(getAllLocations());
   }, [dispatch]);
-  console.log(locations);
 
   useEffect(() => {
     archerContainerRef.current.refreshScreen();
@@ -36,43 +35,14 @@ export const LocationsPage = () => {
                   text={e.text}
                   bgColor={e.bgColor}
                   color={e.color}
-                  key={e._id}
                   borderColor={e.borderColor}
+                  uniqueId={e._id}
+                  key={e._id}
                 />
               );
             })}
 
-          <div className={styles.scheme__container_2}>
-            {/* <div className={styles.size_2}>
-              <ArcherElement
-                id="element1"
-                relations={[
-                  {
-                    targetId: "element2",
-                    targetAnchor: "left",
-                    sourceAnchor: "right",
-                    style: { strokeColor: "#bd0000", strokeWidth: 1 },
-                  },
-                ]}
-              >
-                <div className={styles.block__container}>
-                  <p>Безлюдные земли. Чернолесье. Погост</p>
-                </div>
-              </ArcherElement>
-            </div>
-
-            <div className={styles.size_2}>
-              <ArcherElement id="element2">
-                <div
-                  className={
-                    styles.block__container + " " + styles.blue_background
-                  }
-                >
-                  <p>Безлюдные земли. Черная башня. Служебные помещения</p>
-                </div>
-              </ArcherElement>
-            </div> */}
-          </div>
+          <div className={styles.scheme__container_2}></div>
         </ArcherContainer>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Location.module.css";
 import { ArcherElement } from "react-archer";
+import { NavLink } from "react-router-dom";
 
 export const Location = ({
   positionTop,
@@ -12,8 +13,10 @@ export const Location = ({
   color = "#000000",
   maxWidth = "fit-content",
   borderColor = "#bd0000",
+  uniqueId,
 }) => {
   const arrowsArray = arrows.map((e) => e);
+  const colorA = color;
   return (
     <ArcherElement id={positionId} relations={arrowsArray}>
       <div
@@ -29,7 +32,15 @@ export const Location = ({
         className={text.length === 1 ? styles.container : styles.container_oval}
       >
         {text.length === 1 ? (
-          <p>{text[0]}</p>
+          <NavLink
+            to={`/location/${uniqueId}`}
+            style={({ isActive }) => ({
+              color: isActive ? "black" : color,
+              textDecoration: "none",
+            })}
+          >
+            <p>{text[0]}</p>
+          </NavLink>
         ) : (
           <ol>
             {text.map((e, i) => {

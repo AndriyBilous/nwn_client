@@ -1,5 +1,5 @@
 .container {
-  height: auto;
+  height: fit-content;
   width: fit-content;
   text-align: center;
   border-radius: 10px;
@@ -8,10 +8,19 @@
   z-index: 10;
   opacity: 0.9;
   position: relative;
+  display: flex;
 }
 
 .container p {
   font-size: 15px;
+}
+
+.container:hover {
+  background-color: #147714 !important;
+}
+
+.container:hover p {
+  color: #000000;
 }
 
 .brown_background {
