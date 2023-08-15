@@ -16,7 +16,6 @@ export const Location = ({
   uniqueId,
 }) => {
   const arrowsArray = arrows.map((e) => e);
-  const colorA = color;
   return (
     <ArcherElement id={positionId} relations={arrowsArray}>
       <div

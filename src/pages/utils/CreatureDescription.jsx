@@ -1,11 +1,84 @@
-import React from "react";
-import style from "./CreatureDescription.module.css";
+import React, { useEffect, useState } from "react";
+import styles from "./CreatureDescription.module.css";
+import axios from "./../../utils/axios";
+import { NavLink } from "react-router-dom";
 
-const CreatureDescription = () => {
+const CreatureDescription = ({
+  title,
+  imgUrl,
+  abilities,
+  lvl,
+  ab,
+  locations,
+}) => {
+  const [location, setLocation] = useState([]);
+  const [trigger, setTrigger] = useState(true);
+
+  console.log(location);
+  console.log(trigger);
+
+  const fetchLocation = () => {
+    locations.map(async (el) => {
+      await axios.get(`/location/${el}`).then((result) => {
+        const data = result.data.text[0];
+        setLocation((arr) => [...arr, { id: el, title: data }]);
+      });
+      setTrigger(false);
+    });
+  };
+
+  // console.log(location);
+
+  useEffect(() => {
+    if (trigger && locations?.length >= 1) {
+      fetchLocation();
+    }
+  }, [locations]);
+
   return (
-    <div>
-      <span>CreatureDescription</span>
-      <p>Here will be form from formik library</p>
+    <div className={styles.description__container}>
+      <div className={styles.column_title__container}>
+        <h2>{title}</h2>
+      </div>
+      <div className={styles.column_lvl__container}>
+        <div>
+          <h3>lvl</h3>
+        </div>
+        <div>
+          <p>{lvl ? lvl : "-"}</p>
+        </div>
+      </div>
+      <div className={styles.column_ab__container}>
+        <div>
+          <h3>ab</h3>
+        </div>
+        <div>
+          <p>{ab ? ab + " +1d20" : "-"}</p>
+        </div>
+      </div>
+      <div className={styles.column_abilities__container}>
+        <div>
+          <h3>abilities</h3>
+        </div>
+        <div>
+          <p>{abilities ? abilities : "-"}</p>
+        </div>
+      </div>
+      <div className={styles.location_link__container}>
+        {location?.map((el) => {
+          return (
+            <NavLink
+              key={el.id}
+              to={`/location/${el.id}`}
+              className={styles.location_link}
+            >
+              <div>
+                <p>{el.title}</p>
+              </div>
+            </NavLink>
+          );
+        })}
+      </div>
     </div>
   );
 };

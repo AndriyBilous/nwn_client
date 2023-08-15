@@ -24,8 +24,10 @@ export const LocationPage = () => {
   );
 
   useEffect(() => {
-    fetchLocation();
-  }, [fetchLocation]);
+    if (location === "") {
+      fetchLocation();
+    }
+  }, []);
 
   useEffect(() => {
     if (
@@ -40,7 +42,9 @@ export const LocationPage = () => {
     }
   }, [location, fetchCreature]);
 
-  // console.log(location.imgUrl);
+  const errorSrc = (img) => {
+    img.src = "http://localhost:3002/forest_01.jpg";
+  };
 
   return (
     <div className={styles.location__container}>
@@ -49,7 +53,12 @@ export const LocationPage = () => {
           {location?.imgUrl && (
             <img
               src={`http://localhost:3002/${location.imgUrl}`}
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src = "http://localhost:3002/forest_01.jpg";
+              }}
               alt="locationIMG"
+              className={styles.location_image}
             ></img>
           )}
         </div>
@@ -59,10 +68,9 @@ export const LocationPage = () => {
           {creatures.length === 0 && <div>Here have to be creatures</div>}
           {creatures.length >= 1 &&
             creatures.map((el) => (
-              <div className={styles.creature__container}>
+              <div className={styles.creature__container} key={el._id}>
                 <NavLink
                   to={`/creature/${el._id}`}
-                  key={el._id}
                   className={styles.creature_title__container}
                 >
                   <p>{el.title}</p>

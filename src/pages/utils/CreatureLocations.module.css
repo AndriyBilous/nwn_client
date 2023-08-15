@@ -6,6 +6,9 @@
   border-radius: 10px;
   border: #011983 solid 3px;
   transform: translateX(200%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__container_show {
@@ -34,4 +37,25 @@
   100% {
     transform: translateX(200%);
   }
+}
+
+.location__container {
+  margin: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 80%;
+}
+
+.location__container p {
+  text-align: center;
+  color: blue;
+}
+
+.location__container:hover {
+  background-color: green;
+}
+
+.location__container:hover p {
+  color: white;
 }

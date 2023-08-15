@@ -1,24 +1,89 @@
 import React from "react";
-import style from "./CreatureList.module.css";
+import styles from "./CreatureList.module.css";
+import { NavLink } from "react-router-dom";
 
 export const CreatureList = ({
   styleTrigger,
   setStyleTrigger,
   firstAppearance,
   setFirstAppearance,
+  creatures,
+  creatureLocationsShownID,
+  setCreatureLocationsShownID,
+  setFetchLocationTrigger,
+  setCreatureLocationsID,
+  fetchLocation,
+  creatureLocationsID,
+  creatureLocationsTitle,
 }) => {
+  const findLocationsID = async (id) => {
+    const [locations] = creatures
+      .filter((el) => el._id === id)
+      .map((el) => el.location);
+    // console.log(locations);
+    // setCreatureLocationsID(...locations);
+    await locations.map((el) => fetchLocation(el));
+  };
+
+  const findLocationsTitle = () => {
+    creatureLocationsID.map((el) => fetchLocation(el));
+    console.log(creatureLocationsTitle);
+  };
+
   const handleOnClick = (e) => {
-    setStyleTrigger();
+    if (creatureLocationsShownID === "") {
+      setCreatureLocationsShownID(e.currentTarget.value);
+      setStyleTrigger();
+      setFetchLocationTrigger(e.currentTarget.value);
+      findLocationsID(e.currentTarget.value);
+    } else if (
+      creatureLocationsShownID !== "" &&
+      creatureLocationsShownID !== e.currentTarget.value
+    ) {
+      findLocationsID(e.currentTarget.value);
+      setCreatureLocationsShownID(e.currentTarget.value);
+      setFetchLocationTrigger(e.currentTarget.value);
+    } else {
+      setCreatureLocationsID([]);
+      setCreatureLocationsShownID("");
+      setStyleTrigger();
+      setFetchLocationTrigger("");
+    }
+
     if (firstAppearance) {
       setFirstAppearance();
     }
   };
+  // console.log(creatureLocationsShownID);
 
   if (firstAppearance) {
     return (
-      <div className={style.main__container + " " + style.absolute}>
+      <div className={styles.main__container + " " + styles.absolute}>
         <div>
-          <button onClick={handleOnClick}>Show Description</button>
+          {creatures.map((creature) => {
+            return (
+              <div
+                className={styles.creature_element__container}
+                key={creature._id}
+              >
+                <NavLink
+                  to={`/creature/${creature._id}`}
+                  className={styles.creature_element_title}
+                >
+                  <p>{creature.title}</p>
+                </NavLink>
+                <button
+                  onClick={handleOnClick}
+                  className={styles.creature_element__button}
+                  value={creature._id}
+                >
+                  {creatureLocationsShownID === creature._id
+                    ? "Hide Description"
+                    : "Show Description"}
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -28,77 +93,36 @@ export const CreatureList = ({
     <div
       className={
         styleTrigger
-          ? style.main__container + " " + style.relative_left
-          : style.main__container + " " + style.relative_center
+          ? styles.main__container + " " + styles.relative_left
+          : styles.main__container + " " + styles.relative_center
       }
     >
-      <div>
-        <ul>
-          <li className={style.creature_element}>
-            Some creature 1{" "}
+      {creatures.map((creature) => {
+        return (
+          <div
+            className={styles.creature_element__container}
+            key={creature._id}
+          >
+            <NavLink
+              to={`/creature/${creature._id}`}
+              className={styles.creature_element_title}
+            >
+              <p>{creature.title}</p>
+            </NavLink>
             <button
               onClick={handleOnClick}
-              className={style.creature_element__button}
+              className={styles.creature_element__button}
+              value={creature._id}
             >
-              {styleTrigger ? "Show Description" : "Hide Description"}
+              {creatureLocationsShownID === creature._id
+                ? "Hide Description"
+                : "Show Description"}
+
+              {/* {styleTrigger ? "Show Description" : "Hide Description"} */}
             </button>
-          </li>
-          <li className={style.creature_element}>
-            Some creature 2{" "}
-            <button
-              onClick={handleOnClick}
-              className={style.creature_element__button}
-            >
-              {styleTrigger ? "Show Description" : "Hide Description"}
-            </button>
-          </li>
-          <li className={style.creature_element}>
-            Some creature 3{" "}
-            <button
-              onClick={handleOnClick}
-              className={style.creature_element__button}
-            >
-              {styleTrigger ? "Show Description" : "Hide Description"}
-            </button>
-          </li>
-          <li className={style.creature_element}>
-            Some creature 4{" "}
-            <button
-              onClick={handleOnClick}
-              className={style.creature_element__button}
-            >
-              {styleTrigger ? "Show Description" : "Hide Description"}
-            </button>
-          </li>
-          <li className={style.creature_element}>
-            Some creature 5{" "}
-            <button
-              onClick={handleOnClick}
-              className={style.creature_element__button}
-            >
-              {styleTrigger ? "Show Description" : "Hide Description"}
-            </button>
-          </li>
-          <li className={style.creature_element}>
-            Some creature 6{" "}
-            <button
-              onClick={handleOnClick}
-              className={style.creature_element__button}
-            >
-              {styleTrigger ? "Show Description" : "Hide Description"}
-            </button>
-          </li>
-          <li className={style.creature_element}>
-            Some creature 7{" "}
-            <button
-              onClick={handleOnClick}
-              className={style.creature_element__button}
-            >
-              {styleTrigger ? "Show Description" : "Hide Description"}
-            </button>
-          </li>
-        </ul>
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

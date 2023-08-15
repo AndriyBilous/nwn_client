@@ -1,5 +1,5 @@
 .main__container {
-  height: 80%;
+  height: fit-content;
   width: 45%;
   margin: 2.5%;
   background-color: white;
@@ -13,9 +13,17 @@
 }
 
 .absolute {
-  position: absolute;
   transform: translateX(-200%);
-  animation: open 2s forwards 1;
+  animation: first-appearance 2s forwards 1;
+}
+
+@keyframes first-appearance {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(55%);
+  }
 }
 
 @keyframes open {
@@ -64,12 +72,49 @@
 
 .creature_element__button {
   font-size: 20px;
+  margin: 10px 0 10px 0;
   border-radius: 5px;
   background-color: #8296f3;
+  width: 120px;
 }
 
 .creature_element__button:hover {
   cursor: pointer;
   font-weight: 400;
+  color: white;
+}
+
+.creature_element__container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.creature_element_title {
+  width: 250px;
+  border: black solid 1px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.creature_element_title:hover {
+  background-color: green;
+}
+
+.creature_element_title p {
+  text-decoration: none;
+  color: blue;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.creature_element_title:hover p {
   color: white;
 }

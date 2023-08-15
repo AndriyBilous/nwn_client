@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="locations" element={<LocationsPage />} />
         <Route path="location/:id" element={<LocationPage />} />
-        <Route path="creatures" element={<CreaturesPage />} />
+        <Route path="creatures/*" element={<CreaturesPage />} />
         <Route path="creature/:id" element={<CreaturePage />} />
       </Routes>
     </Layout>

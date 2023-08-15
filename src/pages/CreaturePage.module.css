@@ -14,7 +14,7 @@
 }
 
 .creature_props__container {
-  height: clamp(500px, 60%, 90%);
+  height: fit-content;
   width: clamp(100px, 70%, 1200px);
   /* width: 900px; */
   /* background-color: #4861cf; */
@@ -27,6 +27,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 15px 0;
+  margin: 20px 0;
 }
 
 @keyframes ani {
@@ -39,5 +41,10 @@
 }
 
 .creature_image__container {
-  height: 300px;
+  max-height: 300px;
+  margin-bottom: 30px;
+}
+
+.creature_image {
+  max-width: 90%;
 }

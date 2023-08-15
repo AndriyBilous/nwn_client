@@ -4,11 +4,12 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* min-height: -webkit-fill-available; */
+  min-height: -webkit-fill-available;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   position: relative;
+  /* flex-direction: column; */
   font-size: 24px;
 }
