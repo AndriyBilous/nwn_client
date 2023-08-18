@@ -14,9 +14,7 @@ const CreatureDescription = ({
   const [location, setLocation] = useState([]);
   const [trigger, setTrigger] = useState(true);
 
-  console.log(location);
-  console.log(trigger);
-
+  // Here we are downloading location title for every location that have our creature
   const fetchLocation = () => {
     locations.map(async (el) => {
       await axios.get(`/location/${el}`).then((result) => {
@@ -27,8 +25,7 @@ const CreatureDescription = ({
     });
   };
 
-  // console.log(location);
-
+  // Here we are providing launch of location info downloading, with some dependencies, so it will trigger only once
   useEffect(() => {
     if (trigger && locations?.length >= 1) {
       fetchLocation();

@@ -14,28 +14,28 @@ export const CreaturesPage = () => {
   const [fetchLocationTrigger, setFetchLocationTrigger] = useState(true);
 
   const { creatures } = useSelector((state) => state.creature);
-  const state = useSelector((state) => state);
-  // console.log(state);
 
+  const [creatureLocationsID, setCreatureLocationsID] = useState([]);
+  const [creatureLocationsTitle, setCreatureLocationsTitle] = useState([]);
+
+  // Here we are downloading all creatures data
   useEffect(() => {
     dispatch(getAllCreatures());
   }, [dispatch]);
 
+  // Here we have trigger for first opening of the page (we need it to know what content to display)
   const handleChangeFirstAppearance = () => {
     if (setFirstAppearance) {
       setFirstAppearance(false);
     }
   };
 
+  // Here we have trigger for CreatureLocations visibility
   const handleChangeLocationsTrigger = () => {
     setLocationsTrigger(!locationsTrigger);
   };
 
-  const [creatureLocationsID, setCreatureLocationsID] = useState([]);
-  const [creatureLocationsTitle, setCreatureLocationsTitle] = useState([]);
-
-  // console.log(creatureLocationsID);
-
+  // Here we are downloading locations data
   const fetchLocation = useCallback(
     async (locationID) => {
       setCreatureLocationsTitle([]);
@@ -44,7 +44,6 @@ export const CreaturesPage = () => {
     },
     [creatureLocationsID]
   );
-  console.log(creatureLocationsTitle);
 
   return (
     <div className={styles.creatures__container}>
@@ -60,19 +59,11 @@ export const CreaturesPage = () => {
         setFetchLocationTrigger={setFetchLocationTrigger}
         setCreatureLocationsID={setCreatureLocationsID}
         fetchLocation={fetchLocation}
-        creatureLocationsID={creatureLocationsID}
-        creatureLocationsTitle={creatureLocationsTitle}
       />
       <CreatureLocations
         styleTrigger={locationsTrigger}
         firstAppearance={firstAppearance}
-        creatureLocationsShownID={creatureLocationsShownID}
-        creatures={creatures}
-        fetchLocationTrigger={fetchLocationTrigger}
         creatureLocationsTitle={creatureLocationsTitle}
-        creatureLocationsID={creatureLocationsID}
-        fetchLocation={fetchLocation}
-        setCreatureLocationsTitle={setCreatureLocationsTitle}
       />
     </div>
   );

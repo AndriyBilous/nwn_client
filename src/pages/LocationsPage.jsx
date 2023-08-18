@@ -11,13 +11,14 @@ export const LocationsPage = () => {
 
   let archerContainerRef = useRef(null);
 
+  // Here we are downloading all locations data
   useEffect(() => {
     dispatch(getAllLocations());
   }, [dispatch]);
 
-  useEffect(() => {
-    archerContainerRef.current.refreshScreen();
-  }, [locations]);
+  // useEffect(() => {
+  //   archerContainerRef.current.refreshScreen();
+  // }, [locations]);
 
   return (
     <div className={styles.locations__container}>

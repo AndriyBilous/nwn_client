@@ -10,11 +10,13 @@ export const LocationPage = () => {
 
   const params = useParams();
 
+  // Here we are downloading data of location, that we are displaying
   const fetchLocation = useCallback(async () => {
     const { data } = await axios.get(`/location/${params.id}`);
     setLocation(data);
   }, [params.id, setLocation]);
 
+  // Here we are downloading data of creatures, that our location have
   const fetchCreature = useCallback(
     async (objectID) => {
       const { data } = await axios.get(`/creature/${objectID}`);
@@ -23,12 +25,14 @@ export const LocationPage = () => {
     [location]
   );
 
+  // Here we are launching location data downloading
   useEffect(() => {
     if (location === "") {
       fetchLocation();
     }
   }, []);
 
+  // Here we are launching creatures data downloading
   useEffect(() => {
     if (
       location.creatures &&
@@ -41,10 +45,6 @@ export const LocationPage = () => {
       });
     }
   }, [location, fetchCreature]);
-
-  const errorSrc = (img) => {
-    img.src = "http://localhost:3002/forest_01.jpg";
-  };
 
   return (
     <div className={styles.location__container}>

@@ -8,11 +8,13 @@ export const CreaturePage = () => {
   const [creature, setCreature] = useState("");
   const params = useParams();
 
+  // Here we are downloading data of creature, that we will display
   const fetchCreature = async () => {
     const { data } = await axios.get(`/creature/${params.id}`);
     setCreature(data);
   };
 
+  // Here we are launching function one time (with first creating of this component)
   useEffect(() => {
     fetchCreature();
   }, []);

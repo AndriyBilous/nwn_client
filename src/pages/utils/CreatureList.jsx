@@ -13,23 +13,16 @@ export const CreatureList = ({
   setFetchLocationTrigger,
   setCreatureLocationsID,
   fetchLocation,
-  creatureLocationsID,
-  creatureLocationsTitle,
 }) => {
+  // here we are getting id of locations that we need to display
   const findLocationsID = async (id) => {
     const [locations] = creatures
       .filter((el) => el._id === id)
       .map((el) => el.location);
-    // console.log(locations);
-    // setCreatureLocationsID(...locations);
     await locations.map((el) => fetchLocation(el));
   };
 
-  const findLocationsTitle = () => {
-    creatureLocationsID.map((el) => fetchLocation(el));
-    console.log(creatureLocationsTitle);
-  };
-
+  // In this event we are changing values of some triggers, and downloading info to constants, that we are using for downloading display content
   const handleOnClick = (e) => {
     if (creatureLocationsShownID === "") {
       setCreatureLocationsShownID(e.currentTarget.value);
@@ -54,8 +47,8 @@ export const CreatureList = ({
       setFirstAppearance();
     }
   };
-  // console.log(creatureLocationsShownID);
 
+  // Here we are display content with first opening of component CreaturesPage
   if (firstAppearance) {
     return (
       <div className={styles.main__container + " " + styles.absolute}>
@@ -117,8 +110,6 @@ export const CreatureList = ({
               {creatureLocationsShownID === creature._id
                 ? "Hide Description"
                 : "Show Description"}
-
-              {/* {styleTrigger ? "Show Description" : "Hide Description"} */}
             </button>
           </div>
         );
