@@ -54,11 +54,13 @@ const CreatureDescription = ({
         </div>
       </div>
       <div className={styles.column_abilities__container}>
-        <div>
-          <h3>abilities</h3>
+        <div className={styles.column_abilities__label__container}>
+          <h3 className={styles.column_abilities__label}>abilities</h3>
         </div>
-        <div>
-          <p>{abilities ? abilities : "-"}</p>
+        <div className={styles.column_abilities__text__container}>
+          <p className={styles.column_abilities__text}>
+            {abilities ? abilities : "-"}
+          </p>
         </div>
       </div>
       <div className={styles.location_link__container}>

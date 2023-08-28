@@ -11,6 +11,7 @@
   flex-direction: row;
   list-style: none;
   color: black;
+  padding: 0;
 }
 
 .navigation_list__item {
@@ -23,4 +24,17 @@
 
 .navigation_list__link:hover {
   font-weight: 800;
+}
+
+/* responsive */
+
+@media (max-width: 479.99px) {
+  /* … */
+  .navigation_list__item {
+    margin: 0 20px;
+  }
+
+  .navigation_list__container {
+    padding: 5px;
+  }
 }

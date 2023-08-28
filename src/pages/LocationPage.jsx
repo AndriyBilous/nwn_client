@@ -63,8 +63,12 @@ export const LocationPage = () => {
           )}
         </div>
         <div className={styles.location_description}>
-          <h2>{location.text}</h2>
-          <h3>Available creatures:</h3>
+          <h2 className={styles.location_description__title}>
+            {location.text}
+          </h2>
+          <h3 className={styles.location_description__label}>
+            Available creatures:
+          </h3>
           {creatures.length === 0 && <div>Here have to be creatures</div>}
           {creatures.length >= 1 &&
             creatures.map((el) => (
@@ -73,7 +77,7 @@ export const LocationPage = () => {
                   to={`/creature/${el._id}`}
                   className={styles.creature_title__container}
                 >
-                  <p>{el.title}</p>
+                  <p className={styles.creature_title__text}>{el.title}</p>
                 </NavLink>
               </div>
             ))}

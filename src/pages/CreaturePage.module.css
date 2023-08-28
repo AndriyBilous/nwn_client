@@ -48,3 +48,28 @@
 .creature_image {
   max-width: 90%;
 }
+
+/* responsive */
+
+@media (max-width: 1279.99px) {
+}
+
+@media (max-width: 1023.99px) {
+}
+
+@media (max-width: 767.99px) {
+}
+
+@media (max-width: 522.99px) {
+}
+
+@media (max-width: 479.99px) {
+}
+
+@media (max-width: 319.99px) {
+  .creature_props__container {
+    width: auto;
+    max-width: 90%;
+    margin: 15px 5px;
+  }
+}

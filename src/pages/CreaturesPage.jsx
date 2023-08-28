@@ -7,7 +7,7 @@ import { getAllCreatures } from "../redux/features/creatureSlice";
 import axios from "../utils/axios";
 
 export const CreaturesPage = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [locationsTrigger, setLocationsTrigger] = useState(true);
   const [firstAppearance, setFirstAppearance] = useState(true);
   const [creatureLocationsShownID, setCreatureLocationsShownID] = useState("");
@@ -19,9 +19,9 @@ export const CreaturesPage = () => {
   const [creatureLocationsTitle, setCreatureLocationsTitle] = useState([]);
 
   // Here we are downloading all creatures data
-  useEffect(() => {
-    dispatch(getAllCreatures());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getAllCreatures());
+  // }, [dispatch]);
 
   // Here we have trigger for first opening of the page (we need it to know what content to display)
   const handleChangeFirstAppearance = () => {
