@@ -69,6 +69,10 @@
   }
 }
 
+.creatures__title {
+  text-align: center;
+}
+
 .creature_element {
   margin: 15px auto;
 }

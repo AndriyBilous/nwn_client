@@ -4,6 +4,7 @@ import axios from "../../utils/axios";
 const initialState = {
   creatures: [],
   loading: false,
+  loaded: false,
   showDescriptionButton: "",
 };
 
@@ -34,6 +35,7 @@ export const creatureSlice = createSlice({
     },
     [getAllCreatures.fulfilled]: (state, action) => {
       state.loading = false;
+      state.loaded = true;
       state.creatures = action.payload.creatures;
     },
     [getAllCreatures.rejected]: (state, action) => {

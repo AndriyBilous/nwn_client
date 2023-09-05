@@ -27,7 +27,7 @@ function App() {
     }
   }, [dispatch, creatures]);
 
-  console.log(locations, creatures);
+  // console.log(locations, creatures);
   return (
     <Layout>
       <Routes>

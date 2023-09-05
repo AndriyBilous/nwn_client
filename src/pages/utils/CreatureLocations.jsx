@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CreatureLocations.module.css";
 import { NavLink } from "react-router-dom";
+import Preloader from "./Preloader/Preloader";
 
 export const CreatureLocations = ({
   styleTrigger,
@@ -8,7 +9,11 @@ export const CreatureLocations = ({
   creatureLocationsTitle,
 }) => {
   if (firstAppearance) {
-    return <div className={styles.main__container}></div>;
+    return (
+      <div className={styles.main__container}>
+        <Preloader />
+      </div>
+    );
   }
   return (
     <div
@@ -18,6 +23,11 @@ export const CreatureLocations = ({
           : styles.main__container + " " + styles.main__container_show
       }
     >
+      {(creatureLocationsTitle.length === 0 && <Preloader />) || (
+        <div className={styles.location__title}>
+          <h3>Locations where creatures can be found:</h3>
+        </div>
+      )}
       {creatureLocationsTitle.map((location) => {
         return (
           <NavLink

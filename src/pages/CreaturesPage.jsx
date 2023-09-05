@@ -2,26 +2,26 @@ import React, { useCallback, useEffect, useState } from "react";
 import styles from "./CreaturesPage.module.css";
 import { CreatureList } from "./utils/CreatureList";
 import { CreatureLocations } from "./utils/CreatureLocations";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllCreatures } from "../redux/features/creatureSlice";
+import { useSelector } from "react-redux";
+
 import axios from "../utils/axios";
 
 export const CreaturesPage = () => {
-  // const dispatch = useDispatch();
   const [locationsTrigger, setLocationsTrigger] = useState(true);
   const [firstAppearance, setFirstAppearance] = useState(true);
   const [creatureLocationsShownID, setCreatureLocationsShownID] = useState("");
   const [fetchLocationTrigger, setFetchLocationTrigger] = useState(true);
+  const [creatures, setCreatures] = useState([]);
 
-  const { creatures } = useSelector((state) => state.creature);
+  const creatureDB = useSelector((state) => state.creature);
 
-  const [creatureLocationsID, setCreatureLocationsID] = useState([]);
+  useEffect(() => {
+    if (creatureDB.loaded === true) {
+      setCreatures(creatureDB.creatures);
+    }
+  }, [creatureDB.loaded, creatureDB.creatures]);
+
   const [creatureLocationsTitle, setCreatureLocationsTitle] = useState([]);
-
-  // Here we are downloading all creatures data
-  // useEffect(() => {
-  //   dispatch(getAllCreatures());
-  // }, [dispatch]);
 
   // Here we have trigger for first opening of the page (we need it to know what content to display)
   const handleChangeFirstAppearance = () => {
@@ -36,14 +36,11 @@ export const CreaturesPage = () => {
   };
 
   // Here we are downloading locations data
-  const fetchLocation = useCallback(
-    async (locationID) => {
-      setCreatureLocationsTitle([]);
-      const { data } = await axios.get(`/location/${locationID}`);
-      setCreatureLocationsTitle((arr) => [...arr, data]);
-    },
-    [creatureLocationsID]
-  );
+  const fetchLocation = useCallback(async (locationID) => {
+    setCreatureLocationsTitle([]);
+    const { data } = await axios.get(`/location/${locationID}`);
+    setCreatureLocationsTitle((arr) => [...arr, data]);
+  }, []);
 
   return (
     <div className={styles.creatures__container}>
@@ -57,8 +54,8 @@ export const CreaturesPage = () => {
         setCreatureLocationsShownID={setCreatureLocationsShownID}
         fetchLocationTrigger={fetchLocationTrigger}
         setFetchLocationTrigger={setFetchLocationTrigger}
-        setCreatureLocationsID={setCreatureLocationsID}
         fetchLocation={fetchLocation}
+        creatureDBLoaded={creatureDB.loaded}
       />
       <CreatureLocations
         styleTrigger={locationsTrigger}

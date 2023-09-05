@@ -4,6 +4,7 @@ import axios from "./../../utils/axios";
 const initialState = {
   locations: [],
   loading: false,
+  loaded: false,
 };
 
 export const getAllLocations = createAsyncThunk(
@@ -29,6 +30,7 @@ export const locationSlice = createSlice({
     },
     [getAllLocations.fulfilled]: (state, action) => {
       state.loading = false;
+      state.loaded = true;
       state.locations = action.payload.locations;
     },
     [getAllLocations.rejected]: (state, action) => {
