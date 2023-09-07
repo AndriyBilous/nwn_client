@@ -35,6 +35,12 @@ export const CreaturesPage = () => {
     setLocationsTrigger(!locationsTrigger);
   };
 
+  // This will change triggers, so creatures list will be able to hide without button "Hide description" in CreaturesList component (will be used in low resolution)
+  const handleOnClick = () => {
+    setCreatureLocationsShownID("");
+    setLocationsTrigger(!locationsTrigger);
+  };
+
   // Here we are downloading locations data
   const fetchLocation = useCallback(async (locationID) => {
     setCreatureLocationsTitle([]);
@@ -44,6 +50,13 @@ export const CreaturesPage = () => {
 
   return (
     <div className={styles.creatures__container}>
+      {!locationsTrigger && (
+        <div
+          onClick={handleOnClick}
+          className={styles.active_locations__background}
+        ></div>
+      )}
+
       <CreatureList
         creatures={creatures}
         styleTrigger={locationsTrigger}

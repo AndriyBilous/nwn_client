@@ -54,6 +54,9 @@ export const CreatureList = ({
     return (
       <div className={styles.main__container + " " + styles.absolute}>
         <div>
+          <div className={styles.creatures__title}>
+            <h3>Creatures list:</h3>
+          </div>
           {creatureDBLoaded ? (
             creatures.map((creature) => {
               return (
