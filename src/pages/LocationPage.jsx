@@ -58,6 +58,34 @@ export const LocationPage = () => {
         </div>
       </div>
     );
+  } else if (loc.loaded && cre.loaded && creatures.length === 0) {
+    return (
+      <div className={styles.location__container}>
+        <div className={styles.location_props__container}>
+          <div className={styles.location_image}>
+            {location?.imgUrl && (
+              <img
+                src={`http://localhost:3002/${location.imgUrl}`}
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = "http://localhost:3002/forest_01.jpg";
+                }}
+                alt="locationIMG"
+                className={styles.location_image}
+              ></img>
+            )}
+          </div>
+          <div className={styles.location_description}>
+            <h2 className={styles.location_description__title}>
+              {location.text}
+            </h2>
+            <h3 className={styles.location_description__label}>
+              There are no creatures here
+            </h3>
+          </div>
+        </div>
+      </div>
+    );
   } else
     return (
       <div className={styles.location__container}>

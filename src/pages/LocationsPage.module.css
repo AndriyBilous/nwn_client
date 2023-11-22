@@ -11,59 +11,6 @@
   position: relative;
 }
 
-/* Positioning */
-
-.size_2 {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_3 {
-  width: 33%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_4 {
-  width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_5 {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_6 {
-  width: 16.6%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_7 {
-  width: 14.2%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_8 {
-  width: 12.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* _____________________________________________ */
-
 .scheme__container {
   height: 1500px;
   margin: 50px 0;
@@ -153,9 +100,6 @@
 .oval_big {
   width: 220px;
   height: 170px;
-  /* border-top: 100px solid transparent;
-  border-left: 300px solid;
-  border-bottom: 100px solid transparent; */
   border-radius: 50%;
   background-color: #34c011;
   position: absolute;
@@ -165,9 +109,6 @@
 .oval_small {
   width: 130px;
   height: 100px;
-  /* border-top: 100px solid transparent;
-  border-left: 300px solid;
-  border-bottom: 100px solid transparent; */
   border-radius: 50%;
   background-color: #34c011;
   position: absolute;

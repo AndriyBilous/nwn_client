@@ -8,5 +8,6 @@
 .children__container {
   background-color: rgb(19, 22, 27);
   flex: 1 0 auto;
+  /* height: 100%; */
   /* min-height: max-content; */
 }

@@ -16,7 +16,6 @@ export const CreaturePage = () => {
 
   // Here we are downloading data of creature, that we will display
   const fetchCreature = useCallback(async () => {
-    // const { data } = await axios.get(`/creature/${params.id}`);
     const data = cre.creatures.filter((el) => el._id === params.id);
     setCreature(...data);
   }, [cre.creatures, params.id]);

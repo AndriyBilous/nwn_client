@@ -1,7 +1,9 @@
 .main__container {
   height: fit-content;
+  max-height: 80%;
   width: 45%;
-  margin: 0 2.5%;
+  margin: 2.5%;
+  padding: 2.5%;
   background-color: white;
   border-radius: 10px;
   border: #011983 solid 3px;
@@ -9,10 +11,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   z-index: 10;
-  padding: 25px 0;
   max-width: 500px;
+  overflow-y: scroll;
 }
 
 .main__container_show {
@@ -122,4 +124,34 @@
 }
 
 @media (max-width: 319.99px) {
+}
+
+@media (max-height: 1439.99px) {
+  .main__container {
+    max-height: 1200px;
+  }
+}
+
+@media (max-height: 1079.99px) {
+  .main__container {
+    max-height: 600px;
+  }
+}
+
+@media (max-height: 719.99px) {
+  .main__container {
+    max-height: 350px;
+  }
+}
+
+@media (max-height: 479.99px) {
+  .main__container {
+    max-height: 220px;
+  }
+}
+
+@media (max-height: 359.99px) {
+  .main__container {
+    max-height: 180px;
+  }
 }

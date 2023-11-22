@@ -44,5 +44,4 @@ export const creatureSlice = createSlice({
   },
 });
 
-// export const { setShowDescriptionButton } = createSlice.actions;
 export default creatureSlice.reducer;
