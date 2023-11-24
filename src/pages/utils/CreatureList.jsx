@@ -68,7 +68,9 @@ export const CreatureList = ({
                     to={`/creature/${creature._id}`}
                     className={styles.creature_element_title}
                   >
-                    <p>{creature.title}</p>
+                    <h4 className={styles.creature_element_title_label}>
+                      {creature.title}
+                    </h4>
                   </NavLink>
                   <button
                     onClick={handleOnClick}
@@ -111,7 +113,7 @@ export const CreatureList = ({
               to={`/creature/${creature._id}`}
               className={styles.creature_element_title}
             >
-              <p>{creature.title}</p>
+              <h4>{creature.title}</h4>
             </NavLink>
             <button
               onClick={handleOnClick}
