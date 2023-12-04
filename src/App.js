@@ -31,7 +31,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/*" element={<MainPage />} />
         <Route path="locations" element={<LocationsPage />} />
         <Route path="location/:id" element={<LocationPage />} />
         <Route path="creatures/*" element={<CreaturesPage />} />
