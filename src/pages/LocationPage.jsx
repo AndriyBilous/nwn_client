@@ -13,7 +13,6 @@ export const LocationPage = () => {
   const cre = useSelector((state) => state.creature);
 
   const params = useParams();
-  console.log(location.imgUrl);
 
   // Here we are downloading data of location, that we are displaying
   const fetchLocation = useCallback(async () => {

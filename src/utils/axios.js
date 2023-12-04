@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:3002/api",
+  baseURL: "https://andriybilous.github.io/nwn_server_api/api",
 });
 
 export default instance;
