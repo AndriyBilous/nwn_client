@@ -65,10 +65,11 @@ export const LocationPage = () => {
           <div className={styles.location_image}>
             {location?.imgUrl && (
               <img
-                src={`http://localhost:3002/locations/${location.imgUrl}`}
+                src={`https://nwn-server.onrender.com/locations/${location.imgUrl}`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
-                  currentTarget.src = "http://localhost:3002/forest_01.jpg";
+                  currentTarget.src =
+                    "https://nwn-server.onrender.com/forest_01.jpg";
                 }}
                 alt="locationIMG"
                 className={styles.location_image}
@@ -93,10 +94,11 @@ export const LocationPage = () => {
           <div className={styles.location_image}>
             {location?.imgUrl && (
               <img
-                src={`http://localhost:3002/locations/${location.imgUrl}`}
+                src={`https://nwn-server.onrender.com/locations/${location.imgUrl}`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
-                  currentTarget.src = "http://localhost:3002/forest_01.jpg";
+                  currentTarget.src =
+                    "https://nwn-server.onrender.com/forest_01.jpg";
                 }}
                 alt="locationIMG"
                 className={styles.location_image}
