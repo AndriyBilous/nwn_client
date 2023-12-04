@@ -1,7 +1,7 @@
 .main__container {
   height: 80%;
   width: 45%;
-  margin: 2.5%;
+  /* margin: 2.5%; */
   padding: 2.5%;
   background-color: white;
   border-radius: 10px;
@@ -18,7 +18,7 @@
 
 .absolute {
   transform: translateX(-200%);
-  animation: first-appearance 2s forwards 1;
+  animation: first-appearance 2s forwards;
 }
 
 @keyframes first-appearance {

@@ -51,7 +51,7 @@ export const CreaturePage = () => {
         <div className={styles.creature_image__container}>
           {creature?.imgUrl && (
             <img
-              src={`http://localhost:3002/${creature.imgUrl}`}
+              src={`http://localhost:3002/creatures/${creature.imgUrl}`}
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null; // prevents looping
                 currentTarget.src = "http://localhost:3002/forest_01.jpg";

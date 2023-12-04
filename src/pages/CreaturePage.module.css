@@ -47,6 +47,8 @@
 
 .creature_image {
   max-width: 90%;
+  min-width: 200px;
+  min-height: 200px;
 }
 
 /* responsive */

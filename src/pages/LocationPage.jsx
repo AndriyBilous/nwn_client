@@ -13,6 +13,7 @@ export const LocationPage = () => {
   const cre = useSelector((state) => state.creature);
 
   const params = useParams();
+  console.log(location.imgUrl);
 
   // Here we are downloading data of location, that we are displaying
   const fetchLocation = useCallback(async () => {
@@ -65,7 +66,7 @@ export const LocationPage = () => {
           <div className={styles.location_image}>
             {location?.imgUrl && (
               <img
-                src={`http://localhost:3002/${location.imgUrl}`}
+                src={`http://localhost:3002/locations/${location.imgUrl}`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
                   currentTarget.src = "http://localhost:3002/forest_01.jpg";
@@ -93,7 +94,7 @@ export const LocationPage = () => {
           <div className={styles.location_image}>
             {location?.imgUrl && (
               <img
-                src={`http://localhost:3002/${location.imgUrl}`}
+                src={`http://localhost:3002/locations/${location.imgUrl}`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
                   currentTarget.src = "http://localhost:3002/forest_01.jpg";

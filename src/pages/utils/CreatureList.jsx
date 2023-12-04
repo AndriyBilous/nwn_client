@@ -22,7 +22,6 @@ export const CreatureList = ({
       .map((el) => el.location);
     await locations.map((el) => fetchLocation(el));
   };
-  console.log(creatureDBLoaded);
 
   // In this event we are changing values of some triggers, and downloading info to constants, that we are using for downloading display content
   const handleOnClick = (e) => {
