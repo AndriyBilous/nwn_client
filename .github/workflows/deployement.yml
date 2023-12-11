@@ -25,7 +25,5 @@ jobs:
         run: npm run build --if-present
       - name: Deploy with gh-pages
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git remote set-url origin https://git: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@github.com/AndriyBilous/nwn_client.git
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
