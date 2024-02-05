@@ -12,6 +12,7 @@ export const CreaturesPage = () => {
   const [creatureLocationsShownID, setCreatureLocationsShownID] = useState("");
   const [fetchLocationTrigger, setFetchLocationTrigger] = useState(true);
   const [creatures, setCreatures] = useState([]);
+  const [creatureLocationsTitle, setCreatureLocationsTitle] = useState([]);
 
   const creatureDB = useSelector((state) => state.creature);
 
@@ -20,8 +21,6 @@ export const CreaturesPage = () => {
       setCreatures(creatureDB.creatures);
     }
   }, [creatureDB.loaded, creatureDB.creatures]);
-
-  const [creatureLocationsTitle, setCreatureLocationsTitle] = useState([]);
 
   // Here we have trigger for first opening of the page (we need it to know what content to display)
   const handleChangeFirstAppearance = () => {
