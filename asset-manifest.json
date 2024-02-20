@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nwn_client/static/css/main.b981a823.css",
+    "main.css": "/nwn_client/static/css/main.32c4f6ef.css",
     "main.js": "/nwn_client/static/js/main.3f4bef9d.js",
     "static/media/background_02.jpg": "/nwn_client/static/media/background_02.8218d2459d019ef87b08.jpg",
     "static/media/background_01.jpg": "/nwn_client/static/media/background_01.957edbb9e733319845ce.jpg",
     "static/media/background_03.jpg": "/nwn_client/static/media/background_03.dcbd823fd73ae20ebeae.jpg",
     "static/media/spinner.svg": "/nwn_client/static/media/spinner.04aa2b246ba7f2d2054ef0005f098785.svg",
     "index.html": "/nwn_client/index.html",
-    "main.b981a823.css.map": "/nwn_client/static/css/main.b981a823.css.map",
+    "main.32c4f6ef.css.map": "/nwn_client/static/css/main.32c4f6ef.css.map",
     "main.3f4bef9d.js.map": "/nwn_client/static/js/main.3f4bef9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.b981a823.css",
+    "static/css/main.32c4f6ef.css",
     "static/js/main.3f4bef9d.js"
   ]
 }
